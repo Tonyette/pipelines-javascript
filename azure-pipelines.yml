@@ -22,5 +22,5 @@ steps:
   
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(System.DefaultDirectory)'
+    PathtoPublish: '$(Agent.ArtifactDirectory)'
     ArtifactName: Feyidotnet
