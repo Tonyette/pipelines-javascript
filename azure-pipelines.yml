@@ -22,5 +22,6 @@ steps:
   
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Agent.ArtifactStagingDirectory)'
-    ArtifactName: Feyidotnet
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'feyijs'
+    publishLocation: 'Container'
