@@ -22,13 +22,13 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Agent.BuildDirectory)'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'feyijs'
     publishLocation: 'Container'
     
 - task: ArchiveFiles@2
   inputs:
-     rootFolderOrFile: '$(Agent.BuildDirectory)'
+     rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
      includeRootFolder: false
      archiveType: 'zip'
      archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
